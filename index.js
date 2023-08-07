@@ -1,3 +1,6 @@
+import mongoose from "mongoose";
+import express from "express";
+
 const { MongoClient } = require("mongodb");
 const uri =
   "mongodb+srv://oanagrecu09:gdOyFqrbIhLZwlhL@cluster0.hpttsr4.mongodb.net/?retryWrites=true&w=majority";
