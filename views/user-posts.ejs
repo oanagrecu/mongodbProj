@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Posts</title>
+</head>
+<body>
+  <h2>User Posts</h2>
+  <p>Welcome, <%= user.username %>!</p>
+  <ul>
+    <% posts.forEach(post => { %>
+      <li>
+        <h3><%= post.title %></h3>
+        <p><%= post.body %></p>
+      </li>
+    <% }); %>
+  </ul>
+  <a href="/user/<%= user.username %>/create-post">Create Post</a>
+</body>
+</html>
