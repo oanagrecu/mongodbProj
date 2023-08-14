@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= user.username %> Posts</title>
+    <title>Error</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css"
@@ -32,35 +32,18 @@
           <li class="nav-item">
             <a class="nav-link" href="login">Login</a>
           </li>
+          <!-- You can add more links here -->
         </ul>
       </div>
     </nav>
-    <div class="container mt-5">
-      <h2 class="mb-3">Posts</h2>
-      <p>Welcome, <%= user.username %>!</p>
 
-      <% if (posts.length === 0) { %>
-      <p>This user has no posts yet.</p>
-      <% } else { %>
-      <ul class="list-group">
-        <% posts.forEach(post => { %>
-        <li class="list-group-item">
-          <h3><%= post.title %></h3>
-          <p><%= post.body %></p>
-        </li>
-        <% }); %>
-      </ul>
-      <% } %>
-
-      <a
-        href="/user/<%= user.username %>/create-comment"
-        class="btn btn-primary mt-3"
-        >Comment</a
-      >
+    <div class="container mt-5 text-center">
+      <h1>Error</h1>
+      <p><%= errorMessage %></p>
     </div>
+
     <footer class="bg-dark text-white text-center py-3">
       <p>SocialiZE 2023 &copy;Oana Grecu All rights reserved.</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

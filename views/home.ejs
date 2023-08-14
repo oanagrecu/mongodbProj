@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= user.username %> Posts</title>
+    <title>Welcome to SocialMedia</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css"
@@ -9,7 +9,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="/">SocialiZE</a>
+      <a class="navbar-brand" href="/">SocialMedia</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -32,35 +32,37 @@
           <li class="nav-item">
             <a class="nav-link" href="login">Login</a>
           </li>
+          <!-- You can add more links here -->
         </ul>
       </div>
     </nav>
-    <div class="container mt-5">
-      <h2 class="mb-3">Posts</h2>
-      <p>Welcome, <%= user.username %>!</p>
 
-      <% if (posts.length === 0) { %>
-      <p>This user has no posts yet.</p>
-      <% } else { %>
-      <ul class="list-group">
-        <% posts.forEach(post => { %>
-        <li class="list-group-item">
-          <h3><%= post.title %></h3>
-          <p><%= post.body %></p>
-        </li>
-        <% }); %>
-      </ul>
-      <% } %>
+    <div class="container mt-5 text-center">
+      <h1>Welcome to SocialiZE</h1>
+      <p>
+        This is a  platform where you can connect, share posts, and
+        interact with other users.
+      </p>
+      <p>Ready to get started? Register now or log in to join our community!</p>
+      <div class="mt-4">
+        <a href="register" class="btn btn-primary mr-3">Register</a>
+        <a href="login" class="btn btn-secondary">Login</a>
+      </div>
 
-      <a
-        href="/user/<%= user.username %>/create-comment"
-        class="btn btn-primary mt-3"
-        >Comment</a
-      >
-    </div>
-    <footer class="bg-dark text-white text-center py-3">
+      <div class="mt-5">
+        <img
+        src="/images/social-media.jpg"
+          alt="SocialMedia Image"
+          class="img-fluid"
+          height="700"
+          width="700"
+        />
+      </div>
+
+    <footer class="bg-primary text-white text-center py-3 position-relative w-100 mt-20">
       <p>SocialiZE 2023 &copy;Oana Grecu All rights reserved.</p>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
